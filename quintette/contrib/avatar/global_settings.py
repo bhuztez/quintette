@@ -1,0 +1,10 @@
+AVATAR_PROVIDERS = ('quintette.contrib.avatar.providers.LocalAvatarProvider',)
+AVATAR_AUTO_CLEAN = False
+
+AVATAR_DEFAULT_AVATAR = ''
+AVATAR_DEFAULT_SIZE = 'default'
+AVATAR_MAX_SIZE = 512
+AVATAR_SIZES = {AVATAR_DEFAULT_SIZE: 80}
+
+AVATAR_RESIZE_HANDLER = None
+
