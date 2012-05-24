@@ -1,0 +1,59 @@
+- model: members.member
+  pk: 1
+  fields:
+    username: admin
+
+
+- model: password_auth.credential
+  pk: 1
+  fields:
+    content_type: ["members", "member"]
+    object_id: 1
+    password: pbkdf2_sha256$10000$2fRtVvopmRDK$osyoCk1szwBFCkF8pZ6W1a7tiaJeQZNZuuAAraTAe9g=
+
+
+- model: topics.topic
+  pk: 1
+  fields:
+    title: "Hello, world!"
+    content: "nice"
+    author: 1
+    submit_time: "2012-01-01 00:00:00.000000+08:00"
+
+    
+- model: topics.topic
+  pk: 2
+  fields:
+    title: "Question"
+    content: "problem"
+    author: 1
+    submit_time: "2012-01-02 00:00:00.000000+08:00"
+
+    
+- model: answers.question
+  pk: 2
+  fields: {}
+
+
+- model: tags.tag
+  pk: 1
+  fields:
+    name: A
+    topics: [1, 2]
+
+
+- model: tags.tag
+  pk: 2
+  fields:
+    name: B
+    topics: [1]
+
+
+- model: favorites.favorite
+  pk: 1
+  fields:
+    member: 1
+    content_type: ["topics", "topic"]
+    object_id: 1
+
+

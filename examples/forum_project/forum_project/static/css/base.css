@@ -1,0 +1,403 @@
+html, body {
+  font-size: 16px;
+  color: #666666;
+  background: #CCCCCC;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 0 1em;
+  margin: 0 auto;
+  min-width: 775px;
+  min-height: 300px;
+  max-width: 1800px;
+}
+
+div, img, a, span {
+  margin: 0;
+  padding: 0;
+}
+
+#navbar {
+  position: fixed;
+  float: left;
+  width: 100px;
+  padding: 1em 0;
+}
+
+#avatar {
+  margin: 5px 15px 20px 0px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 5px;
+}
+
+#avatar img {
+  margin: 0;
+  padding: 0;
+  max-width: 60px;
+}
+
+#navbar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#navbar  ul li {
+  font-size: 14px;
+  padding: 0.3em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  word-wrap: break-word;
+  border-radius: 0.3em 0 0 0.3em;
+}
+
+#navbar ul li a:link,
+#navbar ul li a:visited,
+#navbar ul li  {
+  color: #666666;
+  text-decoration: none;
+  outline: none;
+}
+
+#navbar ul li.selected {
+  color: #669933;
+  background: #FFFFFF;
+}
+
+#navbar ul li.selected a:link,
+#navbar ul li.selected a:visited,
+#navbar ul li.selected a:focus {
+  color: #669933;
+}
+
+#navbar ul li:hover {
+  background: #FFFFFF;
+}
+
+#main-wrapper {
+  height: 100%; 
+  margin-left: 100px;
+}
+
+#header {
+  font-size: 14px;
+}
+
+#search {
+  float: left;
+  margin: 0.5em 1em;
+}
+
+#search span {
+  font-size: 16px;
+  -moz-transform: rotate(-45deg);
+  margin-left: -237px;
+}
+
+#search input {
+  width: 200px;
+  margin: 0;
+  padding: 0 1.5em;
+  background: #CCCCCC;
+  border: none;
+  border-radius: 0.5em;
+
+}
+
+#search input:hover,
+#search input:focus {
+  background: #EEEEEE;
+}
+
+#user-tools {
+  float: right;
+  text-align: right;
+  margin: 0.5em 1em;
+}
+
+#user-tools a:link,
+#user-tools a:visited,
+#user-tools a:focus {
+  color: #666666;
+  text-decoration: none;
+  outline: none;
+}
+
+#user-tools a:hover {
+  color: #000000;
+}
+
+#content-wrapper {
+  width: 100%;
+  min-height: 80%;
+  background: #FFFFFF;
+  float: left;
+  border-radius: 0.5em;
+  margin-bottom: 30px;
+}
+
+#footer {
+  clear: both;
+  font-size: 14px;
+  margin-top: -30px;
+  padding: 5px;
+  text-align: center;
+}
+
+
+#content {
+  float: left;
+  min-width: 645px;
+  width: 70%;
+  max-width: 60em;
+  margin: 1em;
+}
+
+#content ul.tags {
+  font-size: 14px;
+  clear: both;
+  margin: 0 0 0.8em 0;
+  padding: 0.4em 0;
+  list-style: none;
+}
+
+#content ul.tags li {
+  display: inline-block;
+  border: 1px outset #DDEEBB;
+  margin: 0.1em 0.5em 0.1em 0;
+  padding: 0.2em 0.4em;
+  background: #DDEEBB;
+}
+
+#content ul.tags a.name {
+  color: #223311;
+  padding: 0 0.5em;
+}
+
+#content ul.tags a.close {
+  color: #AACC88;
+  font-weight: bold;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+#content ul.tags a.close:hover {
+  background: #446633;
+  color: #DDEEBB;
+}
+
+
+h1.subheader {
+  font-size: 20px;
+  display: inline;
+}
+
+div.filters {
+  float: right;
+  font-size: 12px;
+  padding: 8px;
+}
+
+div.filters span, 
+div.filters a {
+  padding: 0 0.8em;
+  border-right: 1px dotted #669933;
+}
+
+div.filters span {
+  color: #333333;
+}
+
+div.filters a {
+  color: #669933;
+}
+
+div.filters .last {
+  border: none;
+}
+
+div.orders {
+  clear: both;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  
+  border-bottom: 2px solid #669933;
+}
+
+
+div.orders span.selected,
+div.orders a {
+  color: #669933;
+  margin-right: 0.75em;
+  padding: 0.3em 1em 0.1em;
+
+  border: solid #669933;
+  border-width: 1px 1px 0 1px;
+  border-radius: 0.4em 0.4em 0 0;
+}
+
+div.orders span.selected {
+  color: #FFFFFF;
+  background: #669933;
+  font-weight: bold;
+}
+
+div.orders a:hover {
+  background: #669933;
+  border-color: #669933;
+  color: #FFFFFF;
+}
+
+div.sidebar {
+  float: left;
+  min-width: 200px;
+  padding: 1em;
+}
+
+div.sidebar h2 {
+  font-size: 16px;
+  padding: 0 0 0.7em 0;
+  margin: 0;
+}
+
+div.sidebar ul.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+div.sidebar ul.tags li {
+  float: left;
+  clear: left;
+  display: block;
+  line-height: 2em;
+  font-size: 14px;
+}
+
+div.sidebar ul.tags li a.tag {
+  border: 1px outset #DDEEBB;
+  margin: 0.1em 0;
+  padding: 0.2em 0.8em;
+  background: #DDEEBB;
+  color: #223311;
+}
+
+#threads {
+
+}
+
+
+div.thread {
+  border-bottom: 1px dotted #669933;
+  min-height: 5em;
+  position: relative;
+}
+
+div.thread a.reply-count {
+  position: absolute;
+  display: block;
+  right: 0;
+
+  width: 2.5em;
+  text-align: center;
+  font-size: 1.5em;
+  background: #DDEEBB;
+  border-radius: 0.5em;
+  padding: 0.5em 0.3em;
+  margin: 0.5em 0.3em;
+  color: #446633;
+}
+
+div.thread a.reply-count.visited {
+  color: #CCCCCC;
+  background: #FFFFFF;
+}
+
+div.thread div.summary {
+  float: left;
+  margin: 0.5em 6em 0.5em 4em;
+}
+
+div.thread div.summary div.title {
+  font-size: 18px;
+}
+
+div.thread div.summary div.title h3 {
+  color: #446633;
+  font-size: 18px;
+  display: inline;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+div.thread div.summary div.title h3 a:link,
+div.thread div.summary div.title h3 a:visited,
+div.thread div.summary div.title h3 a:focus {
+  color: #446633;
+  text-decoration: none;
+  outline: none;
+}
+
+div.thread div.summary div.title h3 a:hover {
+  border-bottom: 2px solid;
+}
+
+div.thread div.summary div.title a.watch {
+  color: #CCDD44;
+}
+
+div.thread div.summary div.meta {
+   margin: 0.7em 0 0 0;
+   font-size: 14px;
+}
+
+div.thread div.summary div.meta a.tag {
+  display: inline-block;
+  border: 1px outset #DDEEBB;
+  margin: 0.1em 0;
+  padding: 0.2em 0.8em;
+  background: #DDEEBB;
+  color: #223311;
+}
+
+
+div.thread img.avatar {
+  position: absolute;
+  left: 0;
+  margin: 0.5em;
+  padding: 0;
+  display: block;
+  max-width: 3em;
+  max-height: 3em;
+}
+
+
+#paginator {
+  font-size: 14px;
+  margin: 2em 0;
+  text-align: center;
+}
+
+#paginator span {
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #668833;
+  border: 1px solid #668833;
+  padding: 0.4em 0.3em;
+  margin: 0 0.3em;
+}
+
+#paginator a {
+  border: 1px solid #668833;
+  padding: 0.4em 0.3em;
+  margin: 0 0.3em;
+  color: #668833;
+}
+

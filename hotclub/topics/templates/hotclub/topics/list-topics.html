@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load topics_tags %}
+
+{% block content %}
+<div class="filters">
+{% if request.user.is_authenticated %}
+  <span class="selected">全部</span>
+  <a>主题</a>
+  <a>回复</a>
+  <a class="last">关注</a>
+{% endif %}
+</div>
+
+<h1 class="subheader">当前标签</h1>
+
+<ul class="tags">
+  <li><a class="name">Tag</a> <a class="close">&times;</a></li>
+  <li><a class="name">Tag</a> <a class="close">&times;</a></li>
+</ul>
+
+<div class="orders">
+  <span class="selected">热门</span>
+  <a>精华</a>
+  <a>发布时间</a>
+  <a>回复时间</a>
+  <a>回复数</a>
+</div>
+
+<div id="threads">
+  {% get_watch_list request.user topic_list as watch_list %}
+  {% for topic in topic_list %}
+  {% get_is_watched topic watch_list as is_watched %}
+  <div class="thread">
+    <a class="reply-count">{{ topic.reply_count }}</a>
+    <img class="avatar"/>
+
+    <div class="summary">
+      <div class="title">
+        <h3><a href="{{ topic.get_absolute_url }}">{{ topic.title }}</a></h3>
+        {% if is_watched %}<a class="watch">&#9733;</a>{% endif %}
+      </div>
+
+      <div class="meta">
+      由 {{ topic.author }} 在 {{ topic.submit_time }} 发起 
+      </div>
+
+      <div class="meta">
+      {% for tag in topic.tags.all %}
+        <a class="tag">{{ tag.name }}</a>
+      {% endfor %}
+      </div>
+
+    </div>
+
+    <br clear="both"/>
+  </div>
+  {% empty %}
+  
+  {% endfor %}
+
+</div>
+
+{% endblock content %}
+
+

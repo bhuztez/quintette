@@ -1,0 +1,16 @@
+- model: sites.site
+  pk: 1
+  fields:
+    domain: localhost:8000
+    name: localhost:8000
+
+- model: auth.user
+  pk: 1
+  fields:
+    username: admin
+    password: pbkdf2_sha256$10000$2fRtVvopmRDK$osyoCk1szwBFCkF8pZ6W1a7tiaJeQZNZuuAAraTAe9g=
+    email: admin@example.com
+    is_active: true
+    is_staff: true
+    is_superuser: true
+
